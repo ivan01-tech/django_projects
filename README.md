@@ -1,1 +1,1 @@
-# django_projects
+# first_drf_api
