@@ -1,4 +1,4 @@
-#!/home/ivan01/dev/py_projects/django_projects/env/bin/python3
+#!/home/ivan01/dev-projects/py_projects/django_projects/env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
