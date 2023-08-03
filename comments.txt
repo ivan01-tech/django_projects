@@ -1,1 +1,5 @@
+csrf protect route with permissions_any by adding @csrf_protect,  ensure_csrf_cookie, decorator , @method_decorator ,
+
 viewset allow you to handle  url and route automatically , it provide method retrieve and update methods and not get and post
+
+when authencated with session , all routes will be csrf protect , just add the @csrf_exempt when usinf permissions.AllowAny
