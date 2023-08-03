@@ -1,0 +1,1 @@
+viewset allow you to handle  url and route automatically , it provide method retrieve and update methods and not get and post

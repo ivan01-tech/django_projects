@@ -17,27 +17,12 @@
         "documentation": {}
     },
     {
-        "label": "Path",
-        "importPath": "pathlib",
-        "description": "pathlib",
+        "label": "django.urls",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "pathlib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
-        "documentation": {}
-    },
-    {
-        "label": "admin",
-        "importPath": "django.contrib",
-        "description": "django.contrib",
-        "isExtraImport": true,
-        "detail": "django.contrib",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "detail": "django.urls",
         "documentation": {}
     },
     {
@@ -62,6 +47,38 @@
         "description": "django.urls",
         "isExtraImport": true,
         "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
         "documentation": {}
     },
     {
@@ -291,6 +308,14 @@
         "documentation": {}
     },
     {
+        "label": "viewsets",
+        "importPath": "rest_framework",
+        "description": "rest_framework",
+        "isExtraImport": true,
+        "detail": "rest_framework",
+        "documentation": {}
+    },
+    {
         "label": "Snippet",
         "importPath": "snippets.models",
         "description": "snippets.models",
@@ -323,43 +348,19 @@
         "documentation": {}
     },
     {
-        "label": "SnippetDetail",
-        "importPath": "snippets.views",
-        "description": "snippets.views",
-        "isExtraImport": true,
-        "detail": "snippets.views",
-        "documentation": {}
-    },
-    {
-        "label": "SnippetList",
-        "importPath": "snippets.views",
-        "description": "snippets.views",
-        "isExtraImport": true,
-        "detail": "snippets.views",
-        "documentation": {}
-    },
-    {
-        "label": "UserDetail",
-        "importPath": "snippets.views",
-        "description": "snippets.views",
-        "isExtraImport": true,
-        "detail": "snippets.views",
-        "documentation": {}
-    },
-    {
-        "label": "UserList",
-        "importPath": "snippets.views",
-        "description": "snippets.views",
-        "isExtraImport": true,
-        "detail": "snippets.views",
-        "documentation": {}
-    },
-    {
         "label": "format_suffix_patterns",
         "importPath": "rest_framework.urlpatterns",
         "description": "rest_framework.urlpatterns",
         "isExtraImport": true,
         "detail": "rest_framework.urlpatterns",
+        "documentation": {}
+    },
+    {
+        "label": "DefaultRouter",
+        "importPath": "rest_framework.routers",
+        "description": "rest_framework.routers",
+        "isExtraImport": true,
+        "detail": "rest_framework.routers",
         "documentation": {}
     },
     {
@@ -493,7 +494,7 @@
         "kind": 5,
         "importPath": "first_api.settings",
         "description": "first_api.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"snippets\",\n    \"rest_framework\",\n]",
+        "peekOfCode": "INSTALLED_APPS = [\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.messages\",\n    \"django.contrib.staticfiles\",\n    \"snippets\",\n    \"rest_framework\",\n    # \"corsheaders\",",
         "detail": "first_api.settings",
         "documentation": {}
     },
@@ -502,7 +503,7 @@
         "kind": 5,
         "importPath": "first_api.settings",
         "description": "first_api.settings",
-        "peekOfCode": "MIDDLEWARE = [\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n]\nROOT_URLCONF = \"first_api.urls\"",
+        "peekOfCode": "MIDDLEWARE = [\n    # \"corsheaders.middleware.CorsMiddleware\",\n    \"django.middleware.security.SecurityMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n    \"django.middleware.clickjacking.XFrameOptionsMiddleware\",\n]",
         "detail": "first_api.settings",
         "documentation": {}
     },
@@ -511,7 +512,7 @@
         "kind": 5,
         "importPath": "first_api.settings",
         "description": "first_api.settings",
-        "peekOfCode": "ROOT_URLCONF = \"first_api.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",",
+        "peekOfCode": "ROOT_URLCONF = \"first_api.urls\"\nTEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [\n            os.path.join(BASE_DIR, \"build\"),\n        ],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [",
         "detail": "first_api.settings",
         "documentation": {}
     },
@@ -520,7 +521,7 @@
         "kind": 5,
         "importPath": "first_api.settings",
         "description": "first_api.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",\n                \"django.template.context_processors.request\",\n                \"django.contrib.auth.context_processors.auth\",",
+        "peekOfCode": "TEMPLATES = [\n    {\n        \"BACKEND\": \"django.template.backends.django.DjangoTemplates\",\n        \"DIRS\": [\n            os.path.join(BASE_DIR, \"build\"),\n        ],\n        \"APP_DIRS\": True,\n        \"OPTIONS\": {\n            \"context_processors\": [\n                \"django.template.context_processors.debug\",",
         "detail": "first_api.settings",
         "documentation": {}
     },
@@ -529,7 +530,7 @@
         "kind": 5,
         "importPath": "first_api.settings",
         "description": "first_api.settings",
-        "peekOfCode": "WSGI_APPLICATION = \"first_api.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation",
+        "peekOfCode": "WSGI_APPLICATION = \"first_api.wsgi.application\"\n# Database\n# https://docs.djangoproject.com/en/4.2/ref/settings/#databases\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    },\n    # \"default\": {\n    #     \"ENGINE\": \"django.db.backends.mysql\",",
         "detail": "first_api.settings",
         "documentation": {}
     },
@@ -538,7 +539,7 @@
         "kind": 5,
         "importPath": "first_api.settings",
         "description": "first_api.settings",
-        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "peekOfCode": "DATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": BASE_DIR / \"db.sqlite3\",\n    },\n    # \"default\": {\n    #     \"ENGINE\": \"django.db.backends.mysql\",\n    #     \"NAME\": \"database_name\",\n    #     \"PASSWORD\" : \"password\",\n    #     \"USER\":\"user_name\",",
         "detail": "first_api.settings",
         "documentation": {}
     },
@@ -556,7 +557,7 @@
         "kind": 5,
         "importPath": "first_api.settings",
         "description": "first_api.settings",
-        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "LANGUAGE_CODE = \"en-us\"\nTIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# STATICFILES_DIRS = [\n#     os.path.join(BASE_DIR, \"build/static\"),\n# ]",
         "detail": "first_api.settings",
         "documentation": {}
     },
@@ -565,7 +566,7 @@
         "kind": 5,
         "importPath": "first_api.settings",
         "description": "first_api.settings",
-        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "TIME_ZONE = \"UTC\"\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# STATICFILES_DIRS = [\n#     os.path.join(BASE_DIR, \"build/static\"),\n# ]\n# STATIC_ROOT = os.path.join(BASE_DIR, \"static\")",
         "detail": "first_api.settings",
         "documentation": {}
     },
@@ -574,7 +575,7 @@
         "kind": 5,
         "importPath": "first_api.settings",
         "description": "first_api.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# STATICFILES_DIRS = [\n#     os.path.join(BASE_DIR, \"build/static\"),\n# ]\n# STATIC_ROOT = os.path.join(BASE_DIR, \"static\")\n# Default primary key field type",
         "detail": "first_api.settings",
         "documentation": {}
     },
@@ -583,7 +584,7 @@
         "kind": 5,
         "importPath": "first_api.settings",
         "description": "first_api.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/4.2/howto/static-files/\nSTATIC_URL = \"static/\"\n# STATICFILES_DIRS = [\n#     os.path.join(BASE_DIR, \"build/static\"),\n# ]\n# STATIC_ROOT = os.path.join(BASE_DIR, \"static\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field",
         "detail": "first_api.settings",
         "documentation": {}
     },
@@ -592,7 +593,7 @@
         "kind": 5,
         "importPath": "first_api.settings",
         "description": "first_api.settings",
-        "peekOfCode": "STATIC_URL = \"static/\"\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "STATIC_URL = \"static/\"\n# STATICFILES_DIRS = [\n#     os.path.join(BASE_DIR, \"build/static\"),\n# ]\n# STATIC_ROOT = os.path.join(BASE_DIR, \"static\")\n# Default primary key field type\n# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# REST_FRAMEWORK = {\n#     \"DEFAULT_PERMISSION_CLASSES\": {\"rest_framework.IsAuthenticated\"},",
         "detail": "first_api.settings",
         "documentation": {}
     },
@@ -601,7 +602,16 @@
         "kind": 5,
         "importPath": "first_api.settings",
         "description": "first_api.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = \"django.db.models.BigAutoField\"\n# REST_FRAMEWORK = {\n#     \"DEFAULT_PERMISSION_CLASSES\": {\"rest_framework.IsAuthenticated\"},\n#     \"DEFAULT_AUTHENTICATION_CLASSES\": {\n#         \"rest_framework.authencation.SessionAuthentication\"\n#     },\n# }\nCORS_ORGIN_ALLOW_ALL = True",
+        "detail": "first_api.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CORS_ORGIN_ALLOW_ALL",
+        "kind": 5,
+        "importPath": "first_api.settings",
+        "description": "first_api.settings",
+        "peekOfCode": "CORS_ORGIN_ALLOW_ALL = True",
         "detail": "first_api.settings",
         "documentation": {}
     },
@@ -714,11 +724,56 @@
         "documentation": {}
     },
     {
-        "label": "urlpatterns",
+        "label": "router",
         "kind": 5,
         "importPath": "snippets.urls",
         "description": "snippets.urls",
-        "peekOfCode": "urlpatterns = [\n    path(\"snippets/\", SnippetList.as_view()),\n    path(\"snippets/<int:pk>/\", SnippetDetail.as_view()),\n    path(\"users/\", UserList.as_view()),\n    path(\"users/<int:pk>/\", UserDetail.as_view()),\n]\n# to allow many type of urls to be handle\nurlpatterns = format_suffix_patterns(urlpatterns=urlpatterns)",
+        "peekOfCode": "router = DefaultRouter()\nrouter.register(r\"snippets\", views.SnippetViewSet, basename=\"snippet\")\nrouter.register(r\"users\", views.UserViewSets, basename=\"user\")\n\"\"\"\nsnippet_list = SnippetViewSet.as_view({\n    'get': 'list',\n    'post': 'create'\n})\nsnippet_detail = SnippetViewSet.as_view({\n    'get': 'retrieve',",
+        "detail": "snippets.urls",
+        "documentation": {}
+    },
+    {
+        "label": "snippet_list",
+        "kind": 5,
+        "importPath": "snippets.urls",
+        "description": "snippets.urls",
+        "peekOfCode": "snippet_list = SnippetViewSet.as_view({\n    'get': 'list',\n    'post': 'create'\n})\nsnippet_detail = SnippetViewSet.as_view({\n    'get': 'retrieve',\n    'put': 'update',\n    'patch': 'partial_update',\n    'delete': 'destroy'\n})",
+        "detail": "snippets.urls",
+        "documentation": {}
+    },
+    {
+        "label": "snippet_detail",
+        "kind": 5,
+        "importPath": "snippets.urls",
+        "description": "snippets.urls",
+        "peekOfCode": "snippet_detail = SnippetViewSet.as_view({\n    'get': 'retrieve',\n    'put': 'update',\n    'patch': 'partial_update',\n    'delete': 'destroy'\n})\nsnippet_highlight = SnippetViewSet.as_view({\n    'get': 'highlight'\n}, renderer_classes=[renderers.StaticHTMLRenderer])\nuser_list = UserViewSet.as_view({",
+        "detail": "snippets.urls",
+        "documentation": {}
+    },
+    {
+        "label": "snippet_highlight",
+        "kind": 5,
+        "importPath": "snippets.urls",
+        "description": "snippets.urls",
+        "peekOfCode": "snippet_highlight = SnippetViewSet.as_view({\n    'get': 'highlight'\n}, renderer_classes=[renderers.StaticHTMLRenderer])\nuser_list = UserViewSet.as_view({\n    'get': 'list'\n})\nuser_detail = UserViewSet.as_view({\n    'get': 'retrieve'\n})\n\"\"\"",
+        "detail": "snippets.urls",
+        "documentation": {}
+    },
+    {
+        "label": "user_list",
+        "kind": 5,
+        "importPath": "snippets.urls",
+        "description": "snippets.urls",
+        "peekOfCode": "user_list = UserViewSet.as_view({\n    'get': 'list'\n})\nuser_detail = UserViewSet.as_view({\n    'get': 'retrieve'\n})\n\"\"\"\n# The API URLs are now determined automatically by the router.\nurlpatterns = [\n    path(\"\", include(router.urls)),",
+        "detail": "snippets.urls",
+        "documentation": {}
+    },
+    {
+        "label": "user_detail",
+        "kind": 5,
+        "importPath": "snippets.urls",
+        "description": "snippets.urls",
+        "peekOfCode": "user_detail = UserViewSet.as_view({\n    'get': 'retrieve'\n})\n\"\"\"\n# The API URLs are now determined automatically by the router.\nurlpatterns = [\n    path(\"\", include(router.urls)),\n]\n# urlpatterns = [\n#     path(\"snippets/\", SnippetList.as_view()),",
         "detail": "snippets.urls",
         "documentation": {}
     },
@@ -727,25 +782,25 @@
         "kind": 5,
         "importPath": "snippets.urls",
         "description": "snippets.urls",
-        "peekOfCode": "urlpatterns = format_suffix_patterns(urlpatterns=urlpatterns)",
+        "peekOfCode": "urlpatterns = [\n    path(\"\", include(router.urls)),\n]\n# urlpatterns = [\n#     path(\"snippets/\", SnippetList.as_view()),\n#     path(\"snippets/<int:pk>/\", SnippetDetail.as_view()),\n#     path(\"users/\", UserList.as_view()),\n#     path(\"users/<int:pk>/\", UserDetail.as_view()),\n# ]\n# # to allow many type of urls to be handle",
         "detail": "snippets.urls",
         "documentation": {}
     },
     {
-        "label": "UserList",
+        "label": "UserViewSets",
         "kind": 6,
         "importPath": "snippets.views",
         "description": "snippets.views",
-        "peekOfCode": "class UserList(generics.ListAPIView):\n    queryset = User.objects.all()\n    serializer_class = UserSerializer\nclass UserDetail(generics.RetrieveAPIView):\n    queryset = User.objects.all()\n    serializer_class = UserSerializer\nclass SnippetList(generics.ListCreateAPIView):\n    queryset = Snippet.objects.all()\n    serializer_class = SnippetSerializer\n    permission_classes = [permissions.IsAuthenticatedOrReadOnly]",
+        "peekOfCode": "class UserViewSets(viewsets.ReadOnlyModelViewSet):\n    queryset = User.objects.all()\n    serializer_class = UserSerializer\nclass SnippetViewSet(viewsets.ModelViewSet):\n    \"\"\"\n    This viewset automatically provides `list`, `create`, `retrieve`,\n    `update` and `destroy` actions.\n    Additionally we also provide an extra `highlight` action.\n    \"\"\"\n    queryset = Snippet.objects.all()",
         "detail": "snippets.views",
         "documentation": {}
     },
     {
-        "label": "UserDetail",
+        "label": "SnippetViewSet",
         "kind": 6,
         "importPath": "snippets.views",
         "description": "snippets.views",
-        "peekOfCode": "class UserDetail(generics.RetrieveAPIView):\n    queryset = User.objects.all()\n    serializer_class = UserSerializer\nclass SnippetList(generics.ListCreateAPIView):\n    queryset = Snippet.objects.all()\n    serializer_class = SnippetSerializer\n    permission_classes = [permissions.IsAuthenticatedOrReadOnly]\n    def perform_create(self,serializer):\n        serializer.save(owner=self.request.user)\n# unsing genrerics and mixins",
+        "peekOfCode": "class SnippetViewSet(viewsets.ModelViewSet):\n    \"\"\"\n    This viewset automatically provides `list`, `create`, `retrieve`,\n    `update` and `destroy` actions.\n    Additionally we also provide an extra `highlight` action.\n    \"\"\"\n    queryset = Snippet.objects.all()\n    serializer_class = SnippetSerializer\n    permission_classes = [\n        permissions.IsAuthenticatedOrReadOnly,",
         "detail": "snippets.views",
         "documentation": {}
     },
@@ -754,7 +809,7 @@
         "kind": 6,
         "importPath": "snippets.views",
         "description": "snippets.views",
-        "peekOfCode": "class SnippetList(generics.ListCreateAPIView):\n    queryset = Snippet.objects.all()\n    serializer_class = SnippetSerializer\n    permission_classes = [permissions.IsAuthenticatedOrReadOnly]\n    def perform_create(self,serializer):\n        serializer.save(owner=self.request.user)\n# unsing genrerics and mixins\n\"\"\" class SnippetList(\n    mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView\n):",
+        "peekOfCode": "class SnippetList(generics.ListCreateAPIView):\n    queryset = Snippet.objects.all()\n    serializer_class = SnippetSerializer\n    permission_classes = [permissions.IsAuthenticatedOrReadOnly]\n    def perform_create(self, serializer):\n        serializer.save(owner=self.request.user)\n# unsing genrerics and mixins\n\"\"\" class SnippetList(\n    mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView\n):",
         "detail": "snippets.views",
         "documentation": {}
     },

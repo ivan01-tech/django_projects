@@ -1,4 +1,6 @@
+import django.urls
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,9 +29,11 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "snippets",
     "rest_framework",
+    # "corsheaders",
 ]
 
 MIDDLEWARE = [
+    # "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -44,7 +48,9 @@ ROOT_URLCONF = "first_api.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            os.path.join(BASE_DIR, "build"),
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -67,7 +73,13 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
-    }
+    },
+    # "default": {
+    #     "ENGINE": "django.db.backends.mysql",
+    #     "NAME": "database_name",
+    #     "PASSWORD" : "password",
+    #     "USER":"user_name",
+    # }
 }
 
 
@@ -107,7 +119,23 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "build/static"),
+# ]
+
+# STATIC_ROOT = os.path.join(BASE_DIR, "static")
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# REST_FRAMEWORK = {
+#     "DEFAULT_PERMISSION_CLASSES": {"rest_framework.IsAuthenticated"},
+#     "DEFAULT_AUTHENTICATION_CLASSES": {
+#         "rest_framework.authencation.SessionAuthentication"
+#     },
+# }
+
+
+CORS_ORGIN_ALLOW_ALL = True
