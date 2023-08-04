@@ -1,3 +1,11 @@
+======== differents types of views ===========
+    function-based views
+    class-based views
+    mixins
+    generic view classes
+    viewsets
+
+
 csrf protect route with permissions_any by adding @csrf_protect,  ensure_csrf_cookie, decorator , @method_decorator ,
 
 viewset allow you to handle  url and route automatically , it provide method retrieve and update methods and not get and post

@@ -29,10 +29,14 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "snippets",
     "rest_framework",
+    # TODO find it
     # "corsheaders",
+    "user_profile",
+    "accounts",
 ]
 
 MIDDLEWARE = [
+    # again
     # "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -49,7 +53,7 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            os.path.join(BASE_DIR, "build"),
+            # os.path.join(BASE_DIR, "build"),
         ],
         "APP_DIRS": True,
         "OPTIONS": {
@@ -119,23 +123,23 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, "build/static"),
-# ]
+STATICFILES_DIRS = [
+    # os.path.join(BASE_DIR, "build/static"),
+]
 
-# STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-
-# REST_FRAMEWORK = {
-#     "DEFAULT_PERMISSION_CLASSES": {"rest_framework.IsAuthenticated"},
-#     "DEFAULT_AUTHENTICATION_CLASSES": {
-#         "rest_framework.authencation.SessionAuthentication"
-#     },
-# }
+REST_FRAMEWORK = {
+    "DEFAULT_PERMISSION_CLASSES": {"rest_framework.IsAuthenticated"},
+    "DEFAULT_AUTHENTICATION_CLASSES": {
+        "rest_framework.authencation.SessionAuthentication"
+    },
+}
 
 
 CORS_ORGIN_ALLOW_ALL = True
