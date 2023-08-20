@@ -4,7 +4,12 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from items.models import Item
 from items.serializers import ItemsSerializer
-from first_api.settings import DATABASES
+from rest_framework import generics
+
+
+class UpdateItemApiView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Item.objects.all()
+    serializer_class = ItemsSerializer
 
 
 @api_view(["POST"])
@@ -13,7 +18,7 @@ def post_item(
 ):
     item = request.data
     serialize = ItemsSerializer(item)
-    
+
     if serialize.is_valid():
         serialize.save()
         return Response(data=serialize.data, status=status.HTTP_201_CREATED)

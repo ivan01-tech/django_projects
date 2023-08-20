@@ -11,7 +11,6 @@ class ItemsSerializer(serializers.ModelSerializer):
 
     def get_fake_field(self, instance):
         return "{instance.name} - {instance.id}"
-
     def validate_name(self, value):
         if value != "John Doe":
             raise serializers.ValidationError("the name is different than John Doe")

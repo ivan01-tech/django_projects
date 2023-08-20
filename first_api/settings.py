@@ -1,10 +1,14 @@
-import django.urls
 from pathlib import Path
 import os
+from django.contrib import auth
+
+# from accounts.models import UserAccount
+# from first_api.settings import AUTH_USER_MODEL
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+USER_MODEL = "auth.USER"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -29,15 +33,13 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "snippets",
     "rest_framework",
-    # TODO find it
-    # "corsheaders",
+    "corsheaders",
     "user_profile",
     "accounts",
 ]
 
 MIDDLEWARE = [
-    # again
-    # "corsheaders.middleware.CorsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -128,18 +130,21 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
+# AUTH_USER_MODEL = UserAccount
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 REST_FRAMEWORK = {
-    "DEFAULT_PERMISSION_CLASSES": {"rest_framework.IsAuthenticated"},
-    "DEFAULT_AUTHENTICATION_CLASSES": {
-        "rest_framework.authencation.SessionAuthentication"
-    },
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.SessionAuthentication",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
 }
+# AUTH_USER_MODEL = "accounts.UserAccount"
 
-
+# CORS_ALLOWED_ORIGINS="*"
 CORS_ORGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOW_ALL_ORIGINS =
